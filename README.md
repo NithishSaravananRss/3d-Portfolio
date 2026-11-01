@@ -111,22 +111,6 @@ A high-contrast inquiry hub with instant clipboard actions, direct messaging cha
 
 ---
 
-## 🌐 Deployment Guide
-
-### Deploying to Vercel (Recommended)
-
-1. Push your code to GitHub (`master` or `main` branch).
-2. Go to [Vercel](https://vercel.com/) and sign in with GitHub.
-3. Click **Add New...** -> **Project**.
-4. Select `3d-Portfolio` from your repositories.
-5. Vercel automatically detects **Vite**:
-   - **Framework Preset**: `Vite`
-   - **Build Command**: `npm run build`
-   - **Output Directory**: `dist`
-6. Click **Deploy**. Your 3D portfolio will be live with continuous deployment on every git push!
-
----
-
 ## 👨‍💻 Author
 
 **Nithish Saravanan**
