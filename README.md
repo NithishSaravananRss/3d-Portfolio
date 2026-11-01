@@ -2,6 +2,7 @@
 
 <div align="center">
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-3d--portfolio--inky--one.vercel.app-E5B869?style=for-the-badge&logo=vercel&logoColor=black)](https://3d-portfolio-inky-one.vercel.app/)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Three.js](https://img.shields.io/badge/Three.js-000000?style=for-the-badge&logo=three.js&logoColor=white)
@@ -12,6 +13,10 @@
 <p align="center">
   <strong>An executive, high-performance 3D cinematic developer portfolio.</strong><br>
   Built with Three.js WebGL, procedural character rigging, elastic physics typography, particle vortex backgrounds, and champagne gold keynote illumination on pitch black.
+</p>
+
+<p align="center">
+  <a href="https://3d-portfolio-inky-one.vercel.app/" target="_blank"><strong>🚀 Explore Live Portfolio: 3d-portfolio-inky-one.vercel.app &rarr;</strong></a>
 </p>
 
 </div>
