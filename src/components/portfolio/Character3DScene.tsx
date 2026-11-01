@@ -465,6 +465,22 @@ export const Character3DScene: React.FC<Character3DSceneProps> = ({
       isWavingRef.current = false;
     }
 
+    const isMobile = window.innerWidth < 1024;
+    if (isMobile) {
+      if (currentSection !== 'hero' && currentSection !== 'dance') {
+        pivot.visible = false;
+        if (shadowMeshRef.current) shadowMeshRef.current.visible = false;
+        setSpeechVisible(false);
+        return;
+      } else {
+        pivot.visible = true;
+        if (shadowMeshRef.current) shadowMeshRef.current.visible = true;
+      }
+    } else {
+      pivot.visible = true;
+      if (shadowMeshRef.current) shadowMeshRef.current.visible = true;
+    }
+
     if (currentSection === 'hero') {
       setSpeechVisible(true);
       if (!isWavingRef.current) {

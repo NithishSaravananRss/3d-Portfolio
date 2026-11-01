@@ -102,7 +102,9 @@ export const ServicesSection: React.FC = () => {
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const isFirstRender = useRef(true);
   const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const [isDesktop, setIsDesktop] = useState(true);
+  const [isDesktop, setIsDesktop] = useState(() =>
+    typeof window !== 'undefined' ? window.innerWidth >= 1024 : true
+  );
 
   const isAnimatingRef = useRef(false);
   const lastActivePos = useRef<{ x: number; y: number }>({ x: -1000, y: -1000 });
@@ -247,12 +249,14 @@ export const ServicesSection: React.FC = () => {
   };
 
   const handleCardClick = (e: React.MouseEvent, id: string) => {
+    if (!isDesktop) return;
     sound.playClick();
     lastActivePos.current = { x: e.clientX, y: e.clientY };
     setActiveId(id);
   };
 
   const handleContainerLeave = () => {
+    if (!isDesktop) return;
     if (hoverTimeoutRef.current) clearTimeout(hoverTimeoutRef.current);
     hoverTimeoutRef.current = setTimeout(() => {
       setActiveId(null);
@@ -272,8 +276,8 @@ export const ServicesSection: React.FC = () => {
         className="max-w-5xl mx-auto w-full z-10 relative lg:h-[750px] flex flex-col lg:block gap-5"
       >
         {ENHANCED_SERVICES.map((srv, idx) => {
-          const isActive = activeId === srv.id;
-          const isCompact = activeId !== null && !isActive;
+          const isActive = isDesktop && activeId === srv.id;
+          const isCompact = isDesktop && activeId !== null && !isActive;
 
           return (
             <div

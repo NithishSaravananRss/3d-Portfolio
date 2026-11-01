@@ -7,15 +7,16 @@ import { ProjectsSection } from './components/portfolio/ProjectsSection';
 import { ContactSection } from './components/portfolio/ContactSection';
 import { CelebrationDanceSection } from './components/portfolio/CelebrationDanceSection';
 import { Footer } from './components/portfolio/Footer';
+import { MobileDesktopNotice } from './components/portfolio/MobileDesktopNotice';
 
 export const App: React.FC = () => {
   return (
-    <div className="w-full bg-[#020202] text-white relative selection:bg-white selection:text-black font-sans min-h-screen">
+    <div className="w-full bg-[#020202] text-white relative selection:bg-white selection:text-black font-sans min-h-screen overflow-x-hidden">
       {/* 3D Continuous Particle Vortex Background (Qronos-Style Hyperboloid) */}
       <ParticleVortexBackground />
 
       {/* Main Cinematic Movie Intro Stage & Companion */}
-      <main className="w-full relative z-10">
+      <main className="w-full relative z-10 overflow-x-hidden">
         <WordmarkHero />
         <AboutSection />
         <ServicesSection />
@@ -24,6 +25,9 @@ export const App: React.FC = () => {
         <CelebrationDanceSection />
         <Footer />
       </main>
+
+      {/* Advisory Notice for Mobile Visitors to Switch to Desktop Site */}
+      <MobileDesktopNotice />
     </div>
   );
 };
