@@ -11,12 +11,12 @@ import { MobileDesktopNotice } from './components/portfolio/MobileDesktopNotice'
 
 export const App: React.FC = () => {
   return (
-    <div className="w-full bg-[#020202] text-white relative selection:bg-white selection:text-black font-sans min-h-screen overflow-x-hidden">
+    <div className="w-full bg-[#020202] text-white relative selection:bg-white selection:text-black font-sans min-h-screen overflow-x-clip">
       {/* 3D Continuous Particle Vortex Background (Qronos-Style Hyperboloid) */}
       <ParticleVortexBackground />
 
       {/* Main Cinematic Movie Intro Stage & Companion */}
-      <main className="w-full relative z-10 overflow-x-hidden">
+      <main className="w-full relative z-10">
         <WordmarkHero />
         <AboutSection />
         <ServicesSection />
